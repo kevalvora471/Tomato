@@ -9,10 +9,10 @@ const mongoURL  = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_P
 
 export const connectDB = async () => {
     try {
-        await mongoose.connect(mongoURL);  // No need for useNewUrlParser and useUnifiedTopology anymore
+        await mongoose.connect(mongoURL);  
         console.log("Connected to MongoDB successfully!");
     } catch (error) {
         console.error("MongoDB connection error:", error);
-        process.exit(1);  // Exit the process if there's a failure
+        process.exit(1);  
     }
 };
